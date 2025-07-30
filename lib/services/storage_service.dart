@@ -61,24 +61,38 @@ class StorageService {
     
     // Initialize candidates if empty
     if (_candidatesBox.isEmpty) {
-      final positions = [
-        'School Captain',
-        'Vice Captain',
-        'House Captain',
-        'Sports Captain'
-      ];
-      
-      // Add sample candidates for each position
-      for (var position in positions) {
-        for (int i = 1; i <= 3; i++) {
-          await _candidatesBox.add(Candidate(
-            name: 'Candidate $i for $position',
-            position: position,
-            className: 'Class ${9 + i}', // Senior classes
-            description: 'Sample candidate $i for $position position.',
-          ));
-        }
-      }
+      // Add Head Girl candidates
+      await _candidatesBox.add(Candidate(
+        name: 'Hethvika',
+        position: 'Head Girl',
+        className: '',
+        description: 'Head Girl candidate',
+      ));
+      await _candidatesBox.add(Candidate(
+        name: 'Saivarsha',
+        position: 'Head Girl',
+        className: '',
+        description: 'Head Girl candidate',
+      ));
+      await _candidatesBox.add(Candidate(
+        name: 'Deeksha',
+        position: 'Head Girl',
+        className: '',
+        description: 'Head Girl candidate',
+      ));
+      // Add Head Boy candidates
+      await _candidatesBox.add(Candidate(
+        name: 'Reuben',
+        position: 'Head Boy',
+        className: '',
+        description: 'Head Boy candidate',
+      ));
+      await _candidatesBox.add(Candidate(
+        name: 'Pranay Kumar',
+        position: 'Head Boy',
+        className: '',
+        description: 'Head Boy candidate',
+      ));
     }
     
     // Initialize settings if empty
